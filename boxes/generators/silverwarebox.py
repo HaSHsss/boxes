@@ -55,7 +55,7 @@ class Silverware(Boxes):
         ])
 
     def wall(self, x=100, y=100, h=100, r=0):
-        self.surroundingWall(x, y, r, h, top="E", bottom='h', callback={
+        self.surroundingWall(x, y, r, h, bottom='h', extend_corners=False, callback={
             0: lambda: self.fingerHolesAt(x / 6.0, 0, h - 10),
             4: lambda: self.fingerHolesAt(x / 3.0 - r, 0, h - 10),
             1: lambda: self.fingerHolesAt(y / 2.0 - r, 0, h - 10),
